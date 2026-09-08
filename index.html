@@ -9,6 +9,95 @@
 </head>
 
 <body>
+     <!-- ==============================
+     POPUP OVERLAY
+    ============================== -->
+
+    <div class="auth-overlay" id="authOverlay"></div>
+
+
+    <!-- ==============================
+     LOGIN POPUP
+    ============================== -->
+
+    <div class="auth-popup" id="loginPopup">
+
+        <button class="auth-close" id="closeLogin">&times;</button>
+
+        <div class="auth-content">
+
+            <h1>Login</h1>
+
+            <p class="auth-switch">
+                or
+                <a href="#" id="openSignup">create an account</a>
+            </p>
+
+            <div class="auth-line"></div>
+
+            <input type="tel" class="auth-input" placeholder="Phone number">
+
+            <div class="auth-terms">
+                <input type="checkbox" id="loginTerms">
+
+                <label for="loginTerms">
+                    I accept the Terms & Conditions & Privacy Policy
+                </label>
+            </div>
+
+            <button class="auth-submit">
+                Login
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==============================
+     SIGN UP POPUP
+    ============================== -->
+
+    <div class="auth-popup" id="signupPopup">
+
+        <button class="auth-close" id="closeSignup">&times;</button>
+
+        <div class="auth-content signup-content">
+
+            <h1>Sign up</h1>
+
+            <p class="auth-switch">
+                or
+                <a href="#" id="openLogin">
+                    login to your account
+                </a>
+            </p>
+
+            <div class="auth-line"></div>
+
+            <input type="tel" class="auth-input" placeholder="Phone number">
+
+            <input type="text" class="auth-input" placeholder="Name">
+
+            <input type="email" class="auth-input" placeholder="Email">
+
+            <a href="#" class="referral">
+                Have a referral code?
+            </a>
+
+            <button class="auth-submit">
+                Continue
+            </button>
+
+            <p class="signup-terms">
+                By creating an account, I accept the
+                Terms & Conditions & Privacy Policy
+            </p>
+
+        </div>
+
+    </div>
+
     <header>
         <div class="logo">
             <img src="img/logo.png" alt="Swiggy logo">
@@ -18,7 +107,7 @@
             <li><a href="/Swiggy-corporate.html">Swiggy Corporate</a></li>
             <li><a href="/partner.html">Partner with us</a></li>
             <li><a href="">Get the App</a></li>
-            <li><a href="/sign in.html" target="_blank">Sign in</a></li>
+            <li><a href="#"  id="signInBtn">Sign in</a></li>
         </ul>
         </nav>
     </header>
