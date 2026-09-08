@@ -28,6 +28,575 @@ body {
     overflow-x: hidden;
 }
 
+/* =================================
+   LOGIN OVERLAY
+================================= */
+
+.login-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.35s ease;
+
+    z-index: 9998;
+}
+
+
+/* =================================
+   LOGIN POPUP
+================================= */
+
+.login-popup {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 450px;
+    max-width: 90%;
+
+    height: 100vh;
+
+    background: #ffffff;
+
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+
+    transform: translateX(100%);
+
+    transition: transform 0.4s ease;
+
+    z-index: 9999;
+
+    overflow-y: auto;
+}
+
+
+/* OPEN */
+
+.login-popup.active {
+    transform: translateX(0);
+}
+
+.login-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =================================
+   CLOSE BUTTON
+================================= */
+
+.login-close {
+    position: absolute;
+
+    top: 25px;
+    right: 25px;
+
+    width: 40px !important;
+    height: 40px;
+
+    padding: 0 !important;
+
+    border: none !important;
+
+    background: transparent !important;
+
+    color: #333;
+
+    font-size: 32px;
+
+    font-weight: normal;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.login-close:hover {
+    background: transparent !important;
+
+    color: #ff5200;
+}
+
+
+/* =================================
+   CONTENT
+================================= */
+
+.login-content {
+    padding: 70px 40px 40px;
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.login-heading {
+    margin-bottom: 45px;
+}
+
+.login-heading h1 {
+    margin: 0;
+
+    font-size: 32px;
+
+    color: #282c3f;
+
+    font-weight: 700;
+}
+
+.login-heading p {
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    color: #686b78;
+}
+
+.login-heading a {
+    color: #ff5200;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+
+/* =================================
+   PHONE INPUT
+================================= */
+
+.login-phone {
+    display: block;
+
+    width: 100%;
+
+    height: 55px;
+
+    padding: 0 16px;
+
+    font-size: 16px;
+
+    border: 1px solid #d4d5d9;
+
+    border-radius: 4px;
+
+    outline: none;
+
+    background: white;
+}
+
+.login-phone:focus {
+    border-color: #ff5200;
+}
+
+
+/* =================================
+   TERMS
+================================= */
+
+.login-terms {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 22px;
+
+    line-height: 20px;
+}
+
+.login-terms input {
+    width: 17px;
+    height: 17px;
+
+    margin-top: 2px;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+.login-terms label {
+    font-size: 13px;
+
+    color: #686b78;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   LOGIN BUTTON
+================================= */
+
+.login-submit {
+    display: block;
+
+    width: 100%;
+
+    height: 55px;
+
+    margin-top: 30px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #ff5200;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.login-submit:hover {
+    background: #e94b00;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .login-popup {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .login-content {
+        padding: 65px 25px 30px;
+    }
+
+}
+
+/* =========================================
+   AUTH OVERLAY
+========================================= */
+
+.auth-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.35s ease;
+
+    z-index: 9998;
+}
+
+.auth-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================
+   AUTH POPUP
+========================================= */
+
+.auth-popup {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: 470px;
+    max-width: 100%;
+
+    height: 100vh;
+
+    background: #fff;
+
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+
+    transform: translateX(100%);
+
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    z-index: 9999;
+
+    overflow-y: auto;
+}
+
+.auth-popup.active {
+    transform: translateX(0);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.auth-content {
+    padding: 70px 45px 40px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.auth-content h1 {
+    margin: 0;
+
+    font-size: 36px;
+
+    font-weight: 700;
+
+    color: #111;
+}
+
+.auth-switch {
+    margin-top: 12px;
+
+    font-size: 16px;
+
+    color: #111;
+}
+
+.auth-switch a {
+    color: #ff5200;
+
+    text-decoration: none;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   SMALL LINE
+========================================= */
+
+.auth-line {
+    width: 35px;
+
+    height: 2px;
+
+    background: #111;
+
+    margin-top: 28px;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.auth-input {
+    display: block;
+
+    width: 100%;
+
+    height: 65px;
+
+    padding: 0 20px;
+
+    margin-bottom: -1px;
+
+    border: 1px solid #d6d6d6;
+
+    outline: none;
+
+    font-size: 17px;
+
+    color: #333;
+
+    background: #fff;
+}
+
+.auth-input::placeholder {
+    color: #777;
+}
+
+.auth-input:focus {
+    border-color: #ff5200;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   LOGIN TERMS
+========================================= */
+
+.auth-terms {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-top: 22px;
+
+    line-height: 19px;
+}
+
+.auth-terms input {
+    width: 17px;
+    height: 17px;
+
+    margin-top: 1px;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+}
+
+.auth-terms label {
+    font-size: 13px;
+
+    color: #555;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.auth-submit {
+    display: block;
+
+    width: 100%;
+
+    height: 58px;
+
+    margin-top: 25px;
+
+    border: none;
+
+    background: #ff5200;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.auth-submit:hover {
+    background: #e94b00;
+}
+
+
+/* =========================================
+   REFERRAL
+========================================= */
+
+.referral {
+    display: inline-block;
+
+    margin-top: 22px;
+
+    color: #ff5200;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   SIGNUP TERMS
+========================================= */
+
+.signup-terms {
+    margin-top: 10px;
+
+    font-size: 13px;
+
+    line-height: 18px;
+
+    color: #333;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.auth-close {
+    position: absolute;
+
+    top: 20px;
+    right: 22px;
+
+    width: 40px !important;
+    height: 40px;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+
+    background: transparent !important;
+
+    color: #333;
+
+    font-size: 32px;
+
+    font-weight: normal;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.auth-close:hover {
+    background: transparent !important;
+
+    color: #ff5200;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .auth-popup {
+        width: 100%;
+    }
+
+    .auth-content {
+        padding: 65px 25px 35px;
+    }
+
+}
 
 /* =========================
    HEADER
