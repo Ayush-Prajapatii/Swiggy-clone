@@ -2,6 +2,172 @@
 // SWIGGY FRONTEND JAVASCRIPT
 // ================================
 
+// ================================
+// LOGIN & SIGN-UP POPUP ANIMATION
+// ================================
+
+
+const signInBtn = document.getElementById("signInBtn");
+
+const loginPopup = document.getElementById("loginPopup");
+const signupPopup = document.getElementById("signupPopup");
+
+const authOverlay = document.getElementById("authOverlay");
+
+const closeLogin = document.getElementById("closeLogin");
+const closeSignup = document.getElementById("closeSignup");
+
+const openSignup = document.getElementById("openSignup");
+const openLogin = document.getElementById("openLogin");
+
+
+// ================================
+// OPEN LOGIN
+// ================================
+
+if (signInBtn) {
+
+    signInBtn.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        loginPopup.classList.add("active");
+
+        signupPopup.classList.remove("active");
+
+        authOverlay.classList.add("active");
+
+    });
+
+}
+
+// ================================
+// LOGIN → SIGN UP
+// ================================
+
+if (openSignup) {
+
+    openSignup.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        // Close login
+        loginPopup.classList.remove("active");
+
+        // Small delay so the transition looks clean
+        setTimeout(() => {
+
+            signupPopup.classList.add("active");
+
+        }, 100);
+
+        // Keep overlay visible
+        authOverlay.classList.add("active");
+
+    });
+
+}
+
+
+// ================================
+// SIGN UP → LOGIN
+// ================================
+
+if (openLogin) {
+
+    openLogin.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        // Close signup
+        signupPopup.classList.remove("active");
+
+        // Open login
+        setTimeout(() => {
+
+            loginPopup.classList.add("active");
+
+        }, 100);
+
+        // Keep overlay visible
+        authOverlay.classList.add("active");
+
+    });
+
+}
+
+
+// ================================
+// CLOSE LOGIN
+// ================================
+
+if (closeLogin) {
+
+    closeLogin.addEventListener("click", function () {
+
+        loginPopup.classList.remove("active");
+
+        authOverlay.classList.remove("active");
+
+    });
+
+}
+
+
+// ================================
+// CLOSE SIGN UP
+// ================================
+
+if (closeSignup) {
+
+    closeSignup.addEventListener("click", function () {
+
+        signupPopup.classList.remove("active");
+
+        authOverlay.classList.remove("active");
+
+    });
+
+}
+
+
+// ================================
+// CLICK OUTSIDE POPUP
+// ================================
+
+if (authOverlay) {
+
+    authOverlay.addEventListener("click", function () {
+
+        loginPopup.classList.remove("active");
+
+        signupPopup.classList.remove("active");
+
+        authOverlay.classList.remove("active");
+
+    });
+
+}
+
+
+// ================================
+// ESC KEY
+// ================================
+
+document.addEventListener("keydown", function (e) {
+
+    if (e.key === "Escape") {
+
+        loginPopup.classList.remove("active");
+
+        signupPopup.classList.remove("active");
+
+        authOverlay.classList.remove("active");
+
+    }
+
+});
+
 
 // ================================
 // 1. HEADER SCROLL ANIMATION
