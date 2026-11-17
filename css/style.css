@@ -1250,3 +1250,404 @@ footer {
         height: 220px;
     }
 }
+
+
+/* =========================================
+   SWIGGY CORPORATE & PARTNER PAGE STYLES
+========================================= */
+
+/* Common Page Styling */
+.partner-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    color: #282c3f;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.partner-hero {
+    background: linear-gradient(135deg, #fff5eb, #fff);
+    text-align: center;
+    padding: 75px 8% 65px;
+}
+
+.partner-hero h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #282c3f;
+    max-width: 850px;
+    margin: 0 auto 20px;
+    line-height: 1.25;
+}
+
+.partner-subtext {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #686b78;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   STATS SECTION
+========================================= */
+
+.partner-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: 55px auto 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 28px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f2e8df;
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(252, 128, 25, 0.13);
+}
+
+.stat-card h3 {
+    font-size: 29px;
+    font-weight: 800;
+    color: #fc8019;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 14px;
+    color: #686b78;
+    font-weight: 500;
+}
+
+/* =========================================
+   CARDS SECTION
+========================================= */
+
+.cards-section {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.cards-section h1 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #282c3f;
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.cards-section h1::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: #fc8019;
+    border-radius: 5px;
+    margin: 13px auto 0;
+}
+
+/* Cards Layout */
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Cards */
+
+.food-card.benefit-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 32px 22px;
+    text-align: center;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.food-card.benefit-card:hover {
+    transform: translateY(-9px);
+    border-color: #fc8019;
+    box-shadow: 0 12px 30px rgba(252, 128, 25, 0.12);
+}
+
+/* Card Icons */
+
+.benefit-icon {
+    width: 65px;
+    height: 65px;
+    background: #fff1e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: 0.3s ease;
+}
+
+.food-card.benefit-card:hover .benefit-icon {
+    background: #fc8019;
+    transform: scale(1.1);
+}
+
+/* Card Content */
+
+.card-content h2 {
+    font-size: 20px;
+    font-weight: 750;
+    color: #282c3f;
+    margin-bottom: 12px;
+}
+
+.card-content p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #686b78;
+}
+
+/* =========================================
+   OUR STORY SECTION
+========================================= */
+
+.corporate-about {
+    background: #fff7f0;
+    padding: 70px 12%;
+    text-align: center;
+}
+
+.corporate-about h1 {
+    font-size: 34px;
+    color: #282c3f;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.corporate-about p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #686b78;
+}
+
+/* =========================================
+   PARTNER REGISTRATION FORM
+========================================= */
+
+.partner-form-section {
+    background: #fff7f0;
+    padding: 75px 20px;
+    text-align: center;
+}
+
+.partner-form-section h1 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #282c3f;
+    margin-bottom: 15px;
+}
+
+.partner-form-section .partner-subtext {
+    margin-bottom: 35px;
+}
+
+/* Form Container */
+
+.partner-form {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.07);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Form Inputs */
+
+.partner-form input {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #282c3f;
+    transition: 0.3s ease;
+}
+
+.partner-form input::placeholder {
+    color: #999;
+}
+
+.partner-form input:focus {
+    border-color: #fc8019;
+    box-shadow: 0 0 0 3px rgba(252, 128, 25, 0.12);
+}
+
+/* Submit Button */
+
+.partner-form button {
+    grid-column: 1 / -1;
+    background: #fc8019;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.partner-form button:hover {
+    background: #e86f0b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(252, 128, 25, 0.25);
+}
+
+.partner-form button:active {
+    transform: scale(0.98);
+}
+
+/* Hide Netlify Honeypot */
+
+.partner-form .hidden-field {
+    display: none;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+body > footer {
+    background: #02060c;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN - TABLETS
+========================================= */
+
+@media (max-width: 992px) {
+
+    .partner-hero h2 {
+        font-size: 34px;
+    }
+
+    .partner-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-section {
+        padding: 60px 5%;
+    }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .partner-hero {
+        padding: 55px 6% 45px;
+    }
+
+    .partner-hero h2 {
+        font-size: 27px;
+    }
+
+    .partner-subtext {
+        font-size: 14px;
+    }
+
+    .partner-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 35px;
+    }
+
+    .stat-card {
+        padding: 20px 8px;
+    }
+
+    .stat-card h3 {
+        font-size: 22px;
+    }
+
+    .stat-card p {
+        font-size: 12px;
+    }
+
+    .cards-section {
+        padding: 50px 6%;
+    }
+
+    .cards-section h1,
+    .corporate-about h1,
+    .partner-form-section h1 {
+        font-size: 27px;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .food-card.benefit-card {
+        min-height: 190px;
+    }
+
+    .corporate-about {
+        padding: 50px 7%;
+    }
+
+    .corporate-about p {
+        font-size: 14px;
+    }
+
+    .partner-form-section {
+        padding: 55px 6%;
+    }
+
+    .partner-form {
+        grid-template-columns: 1fr;
+        padding: 25px 18px;
+        gap: 15px;
+    }
+
+    .partner-form button {
+        grid-column: auto;
+    }
+}
